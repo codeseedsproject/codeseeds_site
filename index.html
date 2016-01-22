@@ -6,18 +6,27 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+
+  <section class="post-section">
+    <h1>Latest Articles</h1>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          <h2>{{post.title}}</h2>
+          <p>{{post.content | strip_html | strip_newlines | truncate: 200 }}</p>
+          <a href="#" class="read-more-link">Read more...</a>
+        </li>
+      {% endfor %}
+    </ul>    
+  </section>
+  
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+
+          <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+
+
+         <!--  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
