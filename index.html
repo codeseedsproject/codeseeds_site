@@ -2,29 +2,27 @@
 layout: default
 ---
 
-<div class="home">
+<main class="site-content">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="site-header">Recent Articles</h1>
 
+  <ul class="article-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}" title="{{post.title}}" class="article-preview">
+          <h2 class="article-preview-title">{{post.title}}</h2>
+          <time class="article-preview-date">{{ post.date | date: "%b %-d, %Y" }}</time>
+          <p class="article-preview-excerpt">{{post.content | strip_html | strip_newlines | truncate: 200 }}</p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>    
 
-
-  <section class="post-section">
-    <h1>Latest Articles</h1>
-    <ul class="post-list">
-      {% for post in site.posts %}
-        <li>
-          <h2>{{post.title}}</h2>
-          <p>{{post.content | strip_html | strip_newlines | truncate: 200 }}</p>
-          <a href="#" class="read-more-link">Read more...</a>
-        </li>
-      {% endfor %}
-    </ul>    
-  </section>
   
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+</main>
 
           <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
 
