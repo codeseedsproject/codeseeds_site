@@ -1,15 +1,15 @@
 <header class="header">
-  <div class="cs-info">
+  <div class="cs-info center bottom">
     <h1>Codeseeds</h1>
     <h2>Tagline goes here</h2>
-    <ul class="social-list">
+    <ul class="social-list flex-center">
       <li class="social-list-items">{% include icon-github.html username="codeseedsproject" %}</li>
       <li class="social-list-items">{% include icon-twitter.html username="CodeSeeds" %}</li>
       <li class="social-list-items">{% include icon-twitter.html username="codeseeds" %}</li>
     </ul>
   </div>
   <nav>
-    <ul class="nav-list">
+    <ul class="nav-list flex-sa">
       {% for link in site.links %}
       <li class="nav-list-item">
         <a href="{{ link.url }}" target="_blank">{{link.title}}</a>
