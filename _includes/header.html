@@ -2,21 +2,19 @@
   <div class="cs-info center bottom">
     <h1>Codeseeds</h1>
     <h2>Tagline goes here</h2>
-    <ul class="social-list flex-center">
+    <ul class="social-list">
       <li class="social-list-items">{% include icon-github.html username="codeseedsproject" %}</li>
       <li class="social-list-items">{% include icon-twitter.html username="CodeSeeds" %}</li>
       <li class="social-list-items">{% include icon-twitter.html username="codeseeds" %}</li>
     </ul>
   </div>
   <nav>
-    <ul class="nav-list flex-sa">
+    <ul class="nav-list">
       {% for link in site.links %}
-      <li class="nav-list-item">
+      <li>
         <a href="{{ link.url }}" target="_blank">{{link.title}}</a>
       </li>
       {% endfor %}
     </ul>
   </nav>   
-    
-
 </header>

@@ -15,7 +15,7 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
+    color: $chocolate;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -23,6 +23,11 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+}
+
+p,
+time {
+  color: $chocolate;
 }
 
 
@@ -35,6 +40,7 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
+  color: $chocolate;
 }
 
 
@@ -93,16 +99,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $orange;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($orange, 15%);
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: darken($orange, 15%);
     }
 }
 
@@ -152,15 +157,6 @@ pre {
     }
 }
 
-
-
-
-
-
-
-
-
-
 /**
  * Icons
  */
@@ -183,23 +179,6 @@ pre {
 /*              KRYSTAL                     */
 /********************************************/
 
-
-
-/*** Flex ***/
-
-.flex {
-  display: flex;
-}
-
-.flex-sa {
-  display: flex;
-  justify-content: space-around;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-}
 
 .center {
   text-align: center;

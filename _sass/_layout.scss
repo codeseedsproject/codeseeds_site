@@ -1,3 +1,21 @@
+@media screen and (min-width: 765px) {
+  .main-wrapper {
+    display: flex;
+  }
+  
+  .content-wrapper {
+    padding: 3rem;
+  }
+  
+  header {
+    flex-basis: 25%;
+  }
+  
+  .page-content {
+    flex-basis: 75%;
+  }
+}
+
 /********************************************/
 /*              HEADER                      */
 /********************************************/
@@ -6,6 +24,12 @@
 .cs-info a, 
 nav a {
   color: $white;
+  &:visited {
+    color: $white;
+  }
+  &:hover {
+    color: $orange;
+  }
 }
 
 
@@ -14,11 +38,13 @@ nav a {
 
 .cs-info {
   background: $green;
-  color: $white;
+  color: $off-white;
 }
 
 .social-list {
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .social-list .username {
@@ -29,11 +55,15 @@ nav a {
   padding: 0 1rem;
 }
 
+.icon > svg path {
+  fill: $white;
+}
+
 
 /* NAVIGATION */
 
 nav {
-  background: $brown;
+  background: $dark-brown;
   color: $white;
   padding: 1rem;
 }
@@ -41,15 +71,64 @@ nav {
 
 
 .nav-list {
+  display: flex;
   justify-content: space-around;
 }
 
-
+@media screen and (min-width: 765px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cs-info {
+    flex-basis: 30%;
+  }
+  
+  nav {
+    flex-basis: 70%;
+    flex-grow: 3;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    li {
+      padding: 0.5rem;
+    }
+  }
+}
 
 /********************************************/
 /*              HOMEPAGE                    */
 /********************************************/
 
-.page-content {
-  padding: 1rem;
+.site-header {
+  border-bottom: 1px solid #000;
 }
+
+.article-list li {
+  border-bottom: 1px solid #000;
+  padding: 0.7rem;
+}
+
+.rss-subscribe {
+  padding: 0.7rem;
+}
+
+@media screen and (min-width: 475px) {
+  .article-list li {
+    padding: 1.5rem;
+  }
+  
+  .rss-subscribe {
+    padding: 1.5rem;
+  }
+}
+
+
+
+
+
+
+

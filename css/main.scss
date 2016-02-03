@@ -14,16 +14,22 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
-$green:            #BFE1BF;
-$brown:            #CEB4A4;
+$light-brown:      #D5BB98;
+$dark-brown:       #4E2A14;
+$chocolate:        #3D211D;
+$off-white:        #EEF2E4;
 $white:            #fff;
-
+//$green:            #85BB7D;
+//$olive:            #D0D4B3;
+$green:            #87BA78;
 $grey-color:       #828282;
+$orange:           #FA825D;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+$text-color:       $chocolate;
 
 // Width of the content area
 $content-width:    800px;
