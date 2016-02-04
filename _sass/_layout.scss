@@ -1,6 +1,12 @@
+/********************************************/
+/*              MAIN BODY                   */
+/********************************************/
+
+
 @media screen and (min-width: 765px) {
   .main-wrapper {
     display: flex;
+    height: 100vh;
   }
   
   .content-wrapper {
@@ -8,11 +14,14 @@
   }
   
   header {
-    flex-basis: 25%;
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
   }
   
   .page-content {
-    flex-basis: 75%;
+    flex: 3;
+    overflow-y: scroll;
   }
 }
 
@@ -68,26 +77,23 @@ nav {
   padding: 1rem;
 }
 
-
-
 .nav-list {
   display: flex;
   justify-content: space-around;
 }
 
 @media screen and (min-width: 765px) {
-  header {
-    display: flex;
-    flex-direction: column;
-  }
   
   .cs-info {
-    flex-basis: 30%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-grow: 30%;
   }
   
   nav {
-    flex-basis: 70%;
     flex-grow: 3;
+    flex-shrink: 0;
+    flex-basis: 70%;
   }
   
   .nav-list {
