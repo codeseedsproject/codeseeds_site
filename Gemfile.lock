@@ -140,6 +140,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth (= 4.2.9)
   github-pages
 
 BUNDLED WITH
