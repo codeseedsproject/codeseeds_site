@@ -87,7 +87,7 @@ nav {
   .cs-info {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-grow: 30%;
+    flex-basis: 30%;
   }
   
   nav {
@@ -129,6 +129,11 @@ nav {
   
   .rss-subscribe {
     padding: 1.5rem;
+  }
+  
+  .site-content {
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
